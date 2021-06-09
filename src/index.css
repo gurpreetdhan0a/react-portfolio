@@ -1,0 +1,395 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --white : #FFFFFF;
+  --red: #F9004D;
+}
+/*Header*/
+.header {
+  display: flex;
+  justify-content: space-around;
+  height :100px;
+  background-color: hsl(0, 0%, 4%);
+  align-items: center;
+}
+
+
+/*Menu*/
+.logo {
+  color : var(--red);
+  font-size: 4rem;
+  font-weight: 700;
+  animation: rotation 10s infinite linear;
+}
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.menu li {
+  display: inline;
+  margin :30px;
+  font-weight: 900;
+}
+
+.menu a{
+  color : var(--white);
+  text-decoration: none;
+}
+
+.menu :hover{
+  border-bottom: 2px solid var(--red);
+}
+
+#small-menu{
+  display: none;
+}
+.small-menu a{
+  color:var(--white);
+  text-decoration:  none;
+  margin-bottom: 2px;
+}
+
+.small-menu li:hover{
+  background-color: var(--red);
+}
+.small-menu li{
+  background-color: var(--red);
+  margin-bottom: 5px;
+}
+
+#resume :hover{
+  border :none
+}
+/*Main Page*/
+.main {
+  background-color : #090909;
+  padding: 190px 0px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.text{
+  position: relative;
+  border-right: 4px solid var(--red);
+  white-space: nowrap;
+  overflow: hidden;
+  margin:auto;
+  color : var(--red)!important;
+}
+
+.animation{
+animation: typewriter 4s steps(25) 1s 1 normal both,
+           blinkCursor 500ms steps(15) infinite normal;
+}
+
+@keyframes typewriter {
+from {
+  width: 0;
+}
+to {
+  width: 560px;
+}
+}
+
+@keyframes blinkCursor{
+from {
+  border-right-color: var(--red)
+}
+to {
+  border-right-color: transparent;
+}
+}
+
+.main p {
+  color : rgba(198,201,216,.75);
+  font-weight: 700;
+}
+
+.main h1 {
+  color : var(--white);
+  font-size: 4rem;
+}
+
+.main span {
+  color : var(--red)
+}
+
+.social-icons a {
+  color : white;
+}
+
+.social-icons :hover {
+  cursor: pointer;
+}
+
+.social-icons svg {
+  width: 45px;
+  height: 45px;
+  margin: 0 20px;
+}
+
+.social-icons :hover{
+  color: var(--red);
+}
+
+.arrow{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.arrow span{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-bottom: 5px solid var(--red);
+  border-right: 5px solid var(--red);
+  transform: rotate(45deg);
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2){
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3){
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0%{
+      opacity: 0;
+      transform: rotate(45deg) translate(90px,90px);
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+      transform: rotate(45deg) translate(110px,110px);
+  }
+}
+
+/*Buttons*/
+.b-border {
+  border : 2px solid var(--red)!important;
+}
+
+.b-outline {
+  border: 2px solid var(--red)!important;
+  background-color : black!important;
+}
+/* Portfolio */
+.portfolio {
+  background-color : #191919;
+  padding: 60px 0
+}
+
+.portfolio h1 {
+  color:white;
+  font-weight: 900;
+  margin-top :0px;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.outer-grid{
+  width:calc(100% - 100px);
+  margin:auto;
+  padding: 0 20px;
+  display:grid;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, 386px);
+  max-width: 1418px;
+}
+
+
+.card {
+  background: rgb(255,0,79);
+  background: linear-gradient(180deg, rgba(255,0,79,1) 57%, rgba(25,25,25,1) 97%);
+  opacity: 0.9;
+}
+
+.card p, h1, h2, h3, h4, h5, span {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card p{
+  font-weight: 900;
+}
+
+.icons svg {
+  width: 45px;
+  height: 45px;
+  margin: 0 10px;
+}
+
+.icons :hover svg{
+  color : var(--red)
+}
+
+.skills h1 {
+  color:white;
+  font-weight: 900;
+  margin-top :0px;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.skills {
+  background-color : #090909;
+  padding: 60px 0
+}
+
+#icons
+{
+  font-size:100px;
+}
+
+.skillIcons
+{
+  display: grid;
+  width : calc(100% - 100px);
+  margin: auto;
+  opacity:0.9;
+  gap: 20px;
+  max-width: 1418px;
+  grid-template-columns: repeat(auto-fill, 126px);
+  justify-content: center;
+  align-items: center;
+  text-align: center
+}
+
+.skillIcons h2
+{
+  font-size: 20px;
+  color: var(--white);
+  font-family: 'Poppins', sans-serif;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.skillIcons i{
+  color: var(--red);
+}
+
+
+
+/*Media queries*/
+
+@media only screen and (max-width: 650px){
+
+  .main h1{
+    font-size: 3rem;
+  }
+
+  .portfolio h1{
+    font-size: 3rem;
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 430px;
+    }
+    }
+}
+@media only screen and (max-width: 550px){
+
+  .main h1{
+    font-size: 2.2rem;
+  }
+
+  .portfolio h1{
+    font-size: 2.2rem;
+  }
+
+  .skills h1{
+    font-size: 2.2rem;
+  }
+
+  .logo{
+    font-size: 3rem;
+    padding-left:10px;
+  }
+
+  .menu{
+    display: none;
+  }
+
+  #small-menu{
+    display: block;
+  }
+  .header{
+    padding: 20px;
+    height :30px;
+  }
+
+  #icons {
+    font-size : 40px;
+    align-items : center;
+    justify-content : center;
+    text-align : center;
+  }
+  
+  .header{
+    justify-content : space-between;
+  }
+
+  .skillIcons h2{
+    font-size: 1rem;
+    text-align: center;
+    justify-content:center;
+    align-items:center;
+    margin: 12px;
+    padding-left :10px;
+  }
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 300px;
+    }
+    }
+
+    @keyframes animate {
+      0%{
+          opacity: 0;
+          transform: rotate(45deg) translate(140px,140px);
+      }
+      50%{
+          opacity: 1;
+      }
+      100%{
+          opacity: 0;
+          transform: rotate(45deg) translate(170px,170px);
+      }
+    }
+}
+
+
