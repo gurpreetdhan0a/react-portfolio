@@ -30,6 +30,7 @@ const Header = () => {
                 <ul className="menu">
                     <li><a href="#projects">Portfolio</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <a id="resume" href={resume} target="_blank"
                     rel="noreferrer">
                     <Button style={{fontWeight: "700"}} className="b-border b-hover" color="primary" variant="outlined">Resume</Button>
@@ -46,6 +47,7 @@ const Header = () => {
           <Menu className="small-menu" {...bindMenu(popupState)}>
             <a href="#projects"><MenuItem onClick={popupState.close}>Portfolio</MenuItem></a>
             <a href="#skills"><MenuItem onClick={popupState.close}>Skills</MenuItem></a>
+            <a href="#contact"><MenuItem onClick={popupState.close}>Contact</MenuItem></a>
             <a href={resume} target="_blank" rel="noreferrer"><MenuItem onClick={popupState.close}>Resume</MenuItem></a>
           </Menu>
             </React.Fragment>
