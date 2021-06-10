@@ -87,6 +87,7 @@ html {
   background-color : #090909;
   padding: 190px 0px;
   font-weight: 900;
+  height:50vh;
   text-align: center;
 }
 
@@ -155,11 +156,9 @@ to {
 }
 
 .arrow{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
+  position: relative;
 }
+
 .arrow span{
   display: block;
   width: 20px;
@@ -168,24 +167,27 @@ to {
   border-right: 5px solid var(--red);
   transform: rotate(45deg);
   animation: animate 2s infinite;
+  margin :auto
 }
+
 .arrow span:nth-child(2){
   animation-delay: -0.2s;
 }
 .arrow span:nth-child(3){
   animation-delay: -0.4s;
 }
+
 @keyframes animate {
   0%{
       opacity: 0;
-      transform: rotate(45deg) translate(90px,90px);
+      transform: rotate(45deg) translate(40px,40px);
   }
   50%{
       opacity: 1;
   }
   100%{
       opacity: 0;
-      transform: rotate(45deg) translate(110px,110px);
+      transform: rotate(45deg) translate(60px,60px);
   }
 }
 
@@ -221,14 +223,22 @@ to {
   justify-content: center;
   align-items: center;
   height: 100%;
-  grid-template-columns: repeat(auto-fill, 386px);
-  max-width: 1418px;
+  grid-template-columns: repeat(auto-fill, 486px);
+  max-width: 1850px;
 }
 
+.tags div {
+  background:#191919!important;
+  color:white;margin:2px;
+  font-weight: 900;
+}
 
+.tags {
+  padding-bottom: 5px;;
+}
 .card {
-  background: rgb(255,0,79);
-  background: linear-gradient(180deg, rgba(255,0,79,1) 57%, rgba(25,25,25,1) 97%);
+  background: rgb(25,25,25);
+  background: linear-gradient(180deg, rgba(25,25,25,1) 47%, rgba(255,0,79,1) 78%);
   opacity: 0.9;
 }
 
@@ -236,18 +246,15 @@ to {
   font-family: 'Poppins', sans-serif;
 }
 
-.card p{
-  font-weight: 900;
+.card h6{
+  line-height: 21px;
+  font-size: 18px;;
 }
 
 .icons svg {
   width: 45px;
   height: 45px;
   margin: 0 10px;
-}
-
-.icons :hover svg{
-  color : var(--red)
 }
 
 .skills h1 {
@@ -286,7 +293,7 @@ to {
 {
   font-size: 20px;
   color: var(--white);
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serƒ14if;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -301,7 +308,6 @@ to {
 /*Media queries*/
 
 @media only screen and (max-width: 650px){
-
   .main h1{
     font-size: 3rem;
   }
@@ -318,10 +324,21 @@ to {
     }
     }
 }
+
+@media only screen and (max-height: 890px) {
+  .main {
+    padding : 80px 0;
+  }
+}
+
 @media only screen and (max-width: 550px){
 
   .main h1{
     font-size: 2.2rem;
+  }
+
+  .main{
+    height :30vh;
   }
 
   .portfolio h1{
@@ -376,20 +393,26 @@ to {
       width: 300px;
     }
     }
-
-    @keyframes animate {
-      0%{
-          opacity: 0;
-          transform: rotate(45deg) translate(140px,140px);
-      }
-      50%{
-          opacity: 1;
-      }
-      100%{
-          opacity: 0;
-          transform: rotate(45deg) translate(170px,170px);
-      }
-    }
 }
 
 
+@media only screen and (max-width: 540px) {
+
+  .main{
+    height : 400px;
+  }
+
+  .outer-grid{
+    grid-template-columns: repeat(auto-fill, 420px);
+  }
+
+  .MuiCardMedia-root{
+    height :250px!important;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 420px) {
+  .outer-grid{
+    grid-template-columns: repeat(auto-fill, 350px);
+  }
+}
