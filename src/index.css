@@ -303,8 +303,32 @@ to {
   color: var(--red);
 }
 
+.color button{
+  margin :auto;
+  border-radius: 20px;
+  font-weight: 900;
+  background-color: var(--red);
+}
 
+form{
+  background :#191919;
+  margin:auto;
+}
 
+.MuiFormLabel-root {
+  color : var(--red)!important;
+}
+
+.color {
+  height: 300px;
+  width :80%;
+  margin :auto;
+}
+
+.MuiButton-label {
+  background-color : var(black)!important;
+  color:white;
+}
 /*Media queries*/
 
 @media only screen and (max-width: 650px){
