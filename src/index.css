@@ -325,9 +325,12 @@ form{
   margin :auto;
 }
 
+.MuiButton-outlinedPrimary {
+  color: var(--white)!important;
+}
+
 .MuiButton-label {
   background-color : var(black)!important;
-  color:white;
 }
 /*Media queries*/
 
