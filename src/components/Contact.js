@@ -13,7 +13,7 @@ const Contact = () => {
             <h1>Contact</h1>
             <div className="color">
             <Paper>
-            <form name="contact" netlify>
+            <form name="contact" method="POST" date-netlify="true">
             <TextField required name="name" variant="outlined" label="Name" fullWidth type="text" InputProps={{
             className: classes.multilineColor}}/>
 
