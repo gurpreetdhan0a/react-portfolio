@@ -453,7 +453,7 @@ form{
     }
 }
 
-@media only screen and (min-width: 736px) and (min-height: 350px) {
+@media only screen and (min-width: 736px) and (max-width: 815px) {
   .main {
     padding:50px 0;
     height: 500px;
