@@ -39,6 +39,7 @@ const Portfolio = () => {
         <ThemeProvider theme={theme}>
         <div id="projects" className="portfolio">
             <h1>My Latest Projects</h1>
+            <div className="width">
             <div className="outer-grid">
                 <div className="inner-grid">
                 <Card className="card" >
@@ -208,6 +209,7 @@ const Portfolio = () => {
                     </CardActions>
                 </Card>
                 </div>
+            </div>
             </div>
         </div>
         </ThemeProvider>

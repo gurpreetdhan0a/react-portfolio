@@ -11,9 +11,9 @@ const Contact = () => {
     return (
         <div id="contact" className="portfolio">
             <h1>Contact</h1>
-            <div className="color">
+            <div className="color width">
             <Paper>
-            <form name="contact" date-netlify="true">
+            <form name="contact" method="POST" date-netlify="true">
             <TextField required name="name" variant="outlined" label="Name" fullWidth type="text" InputProps={{
             className: classes.multilineColor}}/>
 
@@ -21,7 +21,7 @@ const Contact = () => {
             className: classes.multilineColor}} fullWidth/>
 
             <TextField style={{marginTop: "10px"}} required name="message" variant="outlined" InputProps={{
-            className: classes.multilineColor}} label="Message" fullWidth type="text"/>
+            className: classes.multilineColor}} label="Message" fullWidth/>
 
             <Button style={{marginTop: "10px", }}variant="contained" color="secondary" size="large" type="submit" fullWidth >Submit</Button>
             </form>
